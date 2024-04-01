@@ -1,0 +1,39 @@
+header {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: #f0ead2;
+  padding: 15px;
+
+  @media (max-width: 340px) {
+    display: none;
+  }
+}
+
+.nav__links {
+  width: 450px;
+}
+
+.nav__links ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav__links ul a {
+  text-decoration: none;
+  font-family: "Madimi One", sans-serif;
+  font-size: 20px;
+  color: #615f5f;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.nav__links ul a:hover {
+  color: #023e8a;
+  background: #fff;
+  transition: ease-in-out 300ms;
+}

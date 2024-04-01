@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: #F0EAD2;
+  width: 100%;
+  padding: 15px;
+}
+
+.nav__links {
+  width: 450px;
+}
+
+.nav__links ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav__links ul a {
+  text-decoration: none;
+  font-family: "Madimi One", sans-serif;
+  color: #615f5f;
+  border-radius: 8px;
+  /* border: 1px solid magenta; */
+  padding: 10px;
+}
+
+.nav__links ul a:hover {
+  color: #023e8a;
+  background: #FFF;
+  transition: ease-in-out 300ms;
+}

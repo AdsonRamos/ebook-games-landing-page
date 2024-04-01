@@ -1,0 +1,93 @@
+.bio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+
+  .title {
+    margin: 10px;
+    font-family: "Oswald";
+  }
+
+  &__group {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background: #ebebeb;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+
+    @media (max-width: 725px) {
+      flex-direction: column;
+      padding-top: 10px;
+    }
+
+    .left-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      h2 {
+        font-size: 18px;
+        font-style: italic;
+        color: #3a6ea5;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: lighter;
+        color: #535353;
+      }
+
+      img {
+        width: auto;
+        height: 200px;
+        border-radius: 50%;
+      }
+    }
+
+    .right-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      
+
+      .biography {
+        width: 300px;
+        padding: 10px;
+        background: #f5f1ed;
+        border-radius: 10px;
+        font-family: "Nunito";
+      }
+
+
+      @media (max-width: 410px) {
+        flex-direction: column;
+        padding-top: 10px;
+
+        .biography {
+          width: 90%;
+        }
+      }
+      .socials {
+        display: flex;
+        gap: 10px;
+        
+        img {
+          cursor: pointer;
+          width: 40px;
+          height: auto;
+        }
+
+        img:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,458 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pushable {
+  position: relative;
+  background: transparent;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  outline-offset: 4px;
+  outline-color: deeppink;
+  transition: filter 250ms;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: hsl(226, 25%, 69%);
+  border-radius: 8px;
+  filter: blur(2px);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background: linear-gradient(to right, hsl(248, 39%, 39%) 0%, hsl(248, 39%, 49%) 8%, hsl(248, 39%, 39%) 92%, hsl(248, 39%, 29%) 100%);
+}
+
+.front {
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  background: hsl(248, 53%, 58%);
+  padding: 16px 32px;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.pushable:hover {
+  filter: brightness(110%);
+}
+
+.pushable:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.pushable:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+header {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: #f0ead2;
+  padding: 15px;
+}
+@media (max-width: 340px) {
+  nav {
+    display: none;
+  }
+}
+
+.nav__links {
+  width: 450px;
+}
+
+.nav__links ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav__links ul a {
+  text-decoration: none;
+  font-family: "Madimi One", sans-serif;
+  font-size: 20px;
+  color: #615f5f;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.nav__links ul a:hover {
+  color: #023e8a;
+  background: #fff;
+  transition: ease-in-out 300ms;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #eeeaea;
+  width: 100%;
+}
+@media (max-width: 660px) {
+  .hero {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+}
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 400px;
+}
+@media (max-width: 660px) {
+  .hero__text {
+    align-items: center;
+  }
+}
+.hero__text .title {
+  width: 400px;
+  font-size: 45px;
+  font-family: "Oswald", sans-serif;
+}
+.hero__text .subtitle {
+  font-family: "Nunito";
+  font-size: 20px;
+  width: 400px;
+}
+@media (max-width: 430px) {
+  .hero__text {
+    height: 240px;
+  }
+  .hero__text .title {
+    width: 80%;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+  }
+  .hero__text .subtitle {
+    width: 80%;
+    font-family: "Nunito";
+    font-size: 20px;
+  }
+}
+.hero__text .button button {
+  font-family: "Trebuchet MS", sans-serif;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background: rgb(16, 173, 95);
+  cursor: pointer;
+}
+.hero__text .button button:hover {
+  color: #cdb4db;
+  transition: ease-in-out 200ms;
+}
+.hero__card {
+  width: 240px;
+  height: 360px;
+  background: black;
+}
+
+.games {
+  width: 100%;
+}
+.games .title {
+  margin: 10px;
+  font-family: "Oswald";
+}
+.games .cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 1040px) {
+  .games .cards {
+    flex-wrap: wrap;
+  }
+}
+.games__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  width: 320px;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 13px 13px 15px #bebebe, -13px -13px 15px #ffffff;
+}
+.games__card h3 {
+  font-family: "Oswald";
+}
+
+.learning {
+  width: 100%;
+}
+.learning .title {
+  margin: 10px;
+  font-family: "Oswald";
+}
+.learning .text {
+  margin: 10px;
+  font-family: "Nunito";
+}
+.learning .list_group {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 550px) {
+  .learning .list_group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.learning .list ul {
+  list-style: none;
+  font-size: 20px;
+}
+.learning .list ul span {
+  color: green;
+  margin-right: 10px;
+}
+
+.description {
+  width: 100%;
+}
+.description .title {
+  margin: 10px;
+  font-family: "Oswald";
+}
+.description .text {
+  margin: 10px;
+  font-family: "Nunito";
+}
+.description .cards {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 970px) {
+  .description .cards {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.description__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 5px;
+  background: #b2c7d2;
+  box-shadow: 11px 11px 22px #8b9ba4, -11px -11px 22px #d9f3ff;
+}
+.description__card img {
+  width: auto;
+  height: 100px;
+}
+.description__card h3 {
+  font-family: "Oswald";
+}
+.description__card p {
+  font-family: "Nunito";
+  color: #111f4d;
+}
+
+.bio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bio .title {
+  margin: 10px;
+  font-family: "Oswald";
+}
+.bio__group {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background: #ebebeb;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+}
+@media (max-width: 725px) {
+  .bio__group {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+}
+.bio__group .left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.bio__group .left-container h2 {
+  font-size: 18px;
+  font-style: italic;
+  color: #3a6ea5;
+}
+.bio__group .left-container h3 {
+  font-size: 16px;
+  font-weight: lighter;
+  color: #535353;
+}
+.bio__group .left-container img {
+  width: auto;
+  height: 200px;
+  border-radius: 50%;
+}
+.bio__group .right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.bio__group .right-container .biography {
+  width: 300px;
+  padding: 10px;
+  background: #f5f1ed;
+  border-radius: 10px;
+  font-family: "Nunito";
+}
+@media (max-width: 410px) {
+  .bio__group .right-container {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  .bio__group .right-container .biography {
+    width: 90%;
+  }
+}
+.bio__group .right-container .socials {
+  display: flex;
+  gap: 10px;
+}
+.bio__group .right-container .socials img {
+  cursor: pointer;
+  width: 40px;
+  height: auto;
+}
+.bio__group .right-container .socials img:hover {
+  opacity: 0.5;
+}
+
+.faq {
+  width: 100%;
+  background: #115a5a;
+}
+.faq .title {
+  margin: 10px;
+  font-family: "Oswald";
+  font-size: 36px;
+  color: white;
+}
+.faq .topics {
+  margin: 10px;
+}
+.faq .collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 98%;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+}
+.faq .active,
+.faq .collapsible:hover {
+  background-color: #555;
+}
+.faq .collapsible:after {
+  content: "+";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.faq .active:after {
+  content: "−";
+}
+.faq .content {
+  width: 98%;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+.faq .content p {
+  margin: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background: rgb(2, 27, 27);
+}
+.footer .button button {
+  font-family: "Trebuchet MS", sans-serif;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background: rgb(16, 173, 95);
+  cursor: pointer;
+}
+.footer .button button:hover {
+  color: #cdb4db;
+  transition: ease-in-out 200ms;
+}/*# sourceMappingURL=style.css.map */
