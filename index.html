@@ -23,19 +23,17 @@
     <header>
       <nav>
         <div class="nav__links">
-          <ul>
-            <li><a href="#">Jogos</a></li>
-            <li><a href="#">Aprendizado</a></li>
-            <li><a href="#">Bio</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
         </div>
       </nav>
     </header>
     <section class="hero">
-      <div class="hero__card"></div>
+      <div class="hero__card">
+        <div class="image">
+          <img src="./src/images/capa.png" alt="">
+        </div>
+      </div>
       <div class="hero__text">
-        <div class="title">Criando Jogos com HTML, CSS e Javascript</div>
+        <div class="title">Ebook: Criando Jogos com HTML, CSS e Javascript</div>
         <div class="subtitle">Exercite seus conhecimentos em Lógica de Programação enquanto se diverte recriando jogos
           clássicos.</div>
           <button class="pushable">
@@ -51,29 +49,54 @@
 
     <section class="games">
       <div class="title">
-        <h2>Jogos que você irá desenvolver:</h2>
+        <h2>Você irá desenvolver 10 Jogos!</h2>
       </div>
       <div class="cards">
         <div class="games__card">
-          <iframe width="288" height="162" src="https://www.youtube.com/embed/AsGxyB__UT4?si=vTukrJWdalybk7jk"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+          <img src="/src/gameplays/snake.gif" width="300" />          
           <h3>Snake</h3>
         </div>
         <div class="games__card">
-          <iframe width="288" height="162" src="https://www.youtube.com/embed/kI2-NjKbQqE?si=wgX_b-rjVjyVm8m5"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+          <img src="/src/gameplays/minesweeper.gif" width="300">
           <h3>Campo Minado</h3>
         </div>
         <div class="games__card">
-          <iframe width="288" height="162" src="https://www.youtube.com/embed/fWOY8syYJRU?si=5IHcG68IVxaPolDj"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+          <img src="/src/gameplays/tetris.gif" width="300">
           <h3>Tetris</h3>
+        </div>
+        <div class="games__card">
+          <img src="/src/gameplays/sudoku.gif" width="300">
+          <h3>Sudoku</h3>
+        </div>
+
+        <div class="games__card">
+          <img src="/src/gameplays/pacman.gif" width="300">
+          <h3>Pacman</h3>
+        </div>
+
+        <div class="games__card">
+          <img src="/src/gameplays/memory-game.gif" width="300">
+          <h3>Jogo da memória</h3>
+        </div>
+
+        <div class="games__card">
+          <img src="/src/gameplays/brick-breaker.gif" width="300">
+          <h3>Brick Breaker</h3>
+        </div>
+
+        <div class="games__card">
+          <img src="/src/gameplays/pong.gif" width="300">
+          <h3>Ping Pong</h3>
+        </div>
+
+        <div class="games__card">
+          <img src="/src/gameplays/simon.gif" width="300">
+          <h3>Simon</h3>
+        </div>
+
+        <div class="games__card">
+          <img src="/src/gameplays/slides-puzzle.gif" width="300">
+          <h3>Slides Puzzle</h3>
         </div>
       </div>
 
@@ -94,8 +117,7 @@
             <h3>Aprenda se divertindo</h3>
           </div>
           <div class="explanation">
-            <p>Recrie jogos clássicos fazendo um passeio nostálgico pela sua infância, se divertindo durante o processo
-              e solidificando os principais conceitos.</p>
+            <p>Recrie jogos clássicos com diversão e aprendizado, revivendo sua infância e solidificando conceitos-chave.</p>
           </div>
         </div>
 
@@ -107,9 +129,7 @@
             <h3>Aprenda fazendo</h3>
           </div>
           <div class="explanation">
-            <p>A abordagem descrita por esse ebook é totalmente prática. Você irá colocar a mão na massa desde as
-              primeiras linhas de conteúdo, acompanhado de uma explicação bastante clara e objetiva, a fim de que você
-              possa extrair o máximo de conteúdo.</p>
+            <p>Este ebook é totalmente prático. Comece a praticar desde o início, com explicações claras e objetivas para maximizar seu aprendizado.</p>
           </div>
         </div>
 
@@ -121,8 +141,7 @@
             <h3>Economize tempo e dinheiro</h3>
           </div>
           <div class="explanation">
-            <p>Com um preço totalmente acessível, esse ebook fornece excelentes conteúdos práticos. Uma ótima
-              oportunidade para desenvolver suas habilidades de desenvolvimento, economizando dinheiro e tempo.</p>
+            <p>Preço acessível, conteúdo prático. Desenvolva habilidades economizando tempo e dinheiro.</p>
           </div>
         </div>
 
@@ -139,6 +158,7 @@
           </div>
         </div>
       </div>
+      
     </section>
 
     <section class="learning">
@@ -152,31 +172,14 @@
       <div class="list_group">
         <div class="list">
           <ul>
-            <li><span>&#10004;</span>Lorem ipsum</li>
-            <li><span>&#10004;</span>Lorem ipsum</li>
-            <li><span>&#10004;</span>Lorem ipsum</li>
-            <li><span>&#10004;</span>Lorem ipsum</li>
-            <li><span>&#10004;</span>Lorem ipsum</li>
+            <li><span>&#10004;</span>Canvas</li>
+            <li><span>&#10004;</span>Gameloop</li>
+            <li><span>&#10004;</span>Estilização de componentes</li>
+            <li><span>&#10004;</span>Manipulação DOM</li>
+            <li><span>&#10004;</span>Algoritmos Recursivos</li>
           </ul>
         </div>
-        <div class="list">
-          <ul>
-            <li><span>&#10004;</span>Lorem ipsum</li>
-            <li><span>&#10004;</span>Lorem ipsum</li>
-            <li><span>&#10004;</span>Lorem ipsum</li>
-            <li><span>&#10004;</span>Lorem ipsum</li>
-            <li><span>&#10004;</span>Lorem ipsum</li>
-          </ul>
-        </div>
-        <div class="list">
-          <ul>
-            <li><span>&#10004;</span>Lorem ipsum</li>
-            <li><span>&#10004;</span>Lorem ipsum</li>
-            <li><span>&#10004;</span>Lorem ipsum</li>
-            <li><span>&#10004;</span>Lorem ipsum</li>
-            <li><span>&#10004;</span>Lorem ipsum</li>
-          </ul>
-        </div>
+        
       </div>
     </section>
 
@@ -199,9 +202,15 @@
               complexos e criar soluções inovadoras utilizando tecnologia.</p>
           </div>
           <div class="socials">
-            <img src="/src/images/icon-instagram.png" alt="">
-            <img src="/src/images/icon-youtube.png" alt="">
-            <img src="/src/images/icon-linkedin.png" alt="">
+            <a href="https://www.instagram.com/adsoncodes/" target="_blank">              
+              <img src="/src/images/icon-instagram.png" alt="">
+            </a>
+            <a href="https://www.youtube.com/channel/UCA2Ig5ceD0PtNOFOrlzE5_A" target="_blank">
+              <img src="/src/images/icon-youtube.png" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/adsonramos/" target="_blank">
+              <img src="/src/images/icon-linkedin.png" alt="">
+            </a>
           </div>
         </div>
       </div>
@@ -222,7 +231,7 @@
         </div>
         <button class="collapsible">Devo ter um conhecimento prévio em programação?</button>
         <div class="content">
-          <p>Você deve ter entendimento básico sobre HTML, CSS e Javascript.</p>
+          <p>Você deve ter entendimento básico sobre HTML, CSS, Javascript e lógica de programação.</p>
         </div>
         <button class="collapsible">Como este ebook pode me ajudar, se não quero seguir a carreira de Desenvolvedor de
           jogos?</button>
