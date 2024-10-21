@@ -9,6 +9,7 @@
   .cards {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 
     @media (max-width: 1040px) {
       flex-wrap: wrap;

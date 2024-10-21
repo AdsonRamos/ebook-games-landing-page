@@ -197,6 +197,10 @@ nav {
   height: 360px;
   background: black;
 }
+.hero__card img {
+  width: auto;
+  height: 360px;
+}
 
 .games {
   width: 100%;
@@ -208,6 +212,7 @@ nav {
 .games .cards {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 @media (max-width: 1040px) {
   .games .cards {

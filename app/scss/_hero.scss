@@ -18,13 +18,13 @@
 
     @media (max-width: 660px) {
       align-items: center;
-    }    
+    }
 
     .title {
       width: 400px;
       font-size: 45px;
       font-family: "Oswald", sans-serif;
-    }    
+    }
 
     .subtitle {
       font-family: "Nunito";
@@ -67,5 +67,10 @@
     width: 240px;
     height: 360px;
     background: black;
+
+    img {
+      width: auto;
+      height: 360px;
+    }
   }
 }
