@@ -11,6 +11,7 @@
   }
 
   &__text {
+    margin: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -69,8 +70,7 @@
     background: black;
 
     img {
-      width: auto;
-      height: 360px;
+      height: 375px;
     }
   }
 }
